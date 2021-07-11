@@ -12,15 +12,14 @@ Scrapes the Ellen G. White comments from the <a href="https://sabbath-school.adv
 
 ## Screenshots
 
-
 ### Settings
 
 <img width="40%" src="screenshot3.png" >
-
 
 ### Output
 
 
 <img width="40%" src="screenshot2.png" >
 <br>
+
 <img width="75%" src="screenshot1.png" >
