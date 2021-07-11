@@ -10,7 +10,4 @@ Scrapes the Ellen G. White comments from the <a href="https://sabbath-school.adv
 - Saves  the data into `*.tex` files
 - Compiles the `*.tex` files into PDFs using `pdflatex`
 
-
-## Requirements
-
-- 
+<img style="max-width: 700px" src="screenshot.png" >
