@@ -1,0 +1,1 @@
+Scrapes the Ellen G. White comments from the Sabbath School website and prints the data into LaTeX-files.
