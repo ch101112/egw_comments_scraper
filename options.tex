@@ -1,0 +1,332 @@
+%%%%%%%%%%%%%%%%%%%% General %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathtools}
+\usepackage[protrusion=true, expansion]{microtype} 
+
+\usepackage[hidelinks]{hyperref} % Must go after the patches
+
+%\setkomafont{date}{\normalfont}
+%\setkomafont{publishers}{\normalfont}
+%\setkomafont{dedication}{\normalfont}
+%\setkomafont{author}{\normalfont}
+%\setkomafont{subject}{\normalfont}
+
+%%%%%%%%%%%%%%%%%%%%% Section / Scshape %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\makeatletter
+%\renewcommand*\sectionlinesformat[4]{%
+%	\@hangfrom{\hspace*{#2}#3}{\MakeLowercase{#4}}%
+%}
+%\makeatother
+%
+%\setkomafont{disposition}{\scshape}
+%\setkomafont{sectionentry}{\normalfont}
+
+%%%%%%%%%%%%%%%%%%%% Fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[english]{babel}
+
+%%% XCharter
+
+% Remarks: Title in '\normalfont'
+
+%\usepackage[osf]{Alegreya,AlegreyaSans}
+
+%\usepackage[sups, scaled=.96, osf]{XCharter} % 'osf' = oldstyle figures
+%\linespread{1.04}
+%\usepackage[scaled=0.937, osf]{FiraSans}
+%\usepackage[scaled=0.88, osf]{FiraMono}
+%\renewcommand{\sfdefault}{\familydefault}
+
+\usepackage{Charter}
+\addtokomafont{disposition}{\rmfamily}
+
+%\usepackage[scale=0.89]{tgheros}
+%\usepackage[varqu,varl, scaled=1.04]{inconsolata} % sans serif typewr iter
+%\usepackage[xcharter,bigdelims,vvarbb,scaled=1.055]{newtxmath}  % bb from STIX
+%\AtBeginDocument {
+%	\DeclareSymbolFont{bch}{T1}{\rmdefault}{m}{n}
+%	\DeclareMathDelimiter{(}{\mathopen}{bch}{'050}{largesymbols}{"00}
+%	\DeclareMathDelimiter{)}{\mathopen}{bch}{'051}{largesymbols}{"01}
+%}
+%\addtokomafont{disposition}{\normalfont\sffamily\firamedium}
+
+%\usepackage[charter,expert, cal=cmcal]{mathdesign}
+%\usepackage[mathcal]{eucal}
+
+\usepackage{textcomp}
+
+%%% Palatino
+%\usepackage[no-math]{fontspec}
+%%\usepackage[T1]{fontenc}
+%\usepackage[]{unicode-math}
+%\setmainfont{TeX Gyre Pagella} 
+%\setmonofont[Scale=MatchUppercase]{Inconsolata}
+%\setmathfont{TeX Gyre Pagella Math}
+%%\setsansfont[Scale=MatchUppercase]{Latin Modern Sans} % has no small caps
+%\setsansfont[Scale=MatchUppercase]{Cabin} % has no small caps
+%%\setsansfont[Scale=MatchUppercase]{Libertinus Sans}
+%%\usepackage[sc]{mathpazo} % optional: osf
+\linespread{1.1}  
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% Random Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{geometry}	
+%\usepackage{marvosym} %Einbindung verschiedener Symbole
+%%\usepackage{array}
+\usepackage{enumerate} %Erweiterung der enumerate-Umgebung
+\usepackage{ifthen,calc}
+\usepackage{mathrsfs,amssymb} %Zusatzzeichen
+\usepackage{wrapfig}
+%%\usepackage[intlimits]{empheq} %Lädt auch amsmath; Option intlimits Integralgrenzen über/unter Integral gestellt
+\usepackage[retainorgcmds]{IEEEtrantools} %Besonders geeignet für einen mehrzeilige Formelsatz
+\usepackage{theorem} %Theoremlayout
+\usepackage{multicol}
+\setlength\columnsep{20pt}
+%\usepackage[svgnames,table, dvipsnames]{xcolor}
+%\usepackage{graphicx}
+%\usepackage{multirow}
+%\usepackage{verbatim} %Für mehrzeilige Kommentare
+%\usepackage{enumitem} %For list environments
+%%%\usepackage{parskip} %Einzug aus, Absatzabstand ein
+%%%\usepackage{sfmath}
+%\usepackage{blindtext}
+%\usepackage{floatflt}
+%\usepackage{float}
+%%%\usepackage{titlesec}
+%\usepackage{booktabs}
+%\usepackage[fulladjust]{marginnote}
+%\usepackage{longtable}
+%\usepackage{xtab,afterpage}
+%\usepackage{xcolor}
+%\usepackage{accents}
+%\usepackage{bookmark}
+%\usepackage{siunitx}
+%\usepackage{physics} % differentials: \dd{x}
+%%\usepackage[most]{tcolorbox}
+%\usepackage[a]{esvect} % vectors, options a--h
+%\usepackage{textcomp} 
+%
+%\usepackage{tikzscale}
+%\usepackage{listings}
+\usepackage{csquotes}
+
+
+
+
+%%%%%%%%%%%%%%%%%% Graphics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{tikz}
+%\usepackage{pgfplots}
+%\usepgfplotslibrary{external}
+
+
+%%%%%%%%%%%%%%%%%%% Mathematics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Theorems % enable "theorem" package to use!! -------------------------------------
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{satz}{Satz}[section]
+%\newtheorem{beispiel}{Bsp.}[section]
+%\newtheorem{definition}{Def.}[section]
+
+% Mathematische Opteratoren ---------------------------------------------------------
+%\DeclareMathOperator{\rg}{rg}
+%\DeclareMathOperator{\diag}{diag}
+%\DeclareMathOperator{\spur}{tr}
+%\DeclareMathOperator{\mspan}{span}
+%\DeclareMathOperator{\mim}{im}
+%\DeclareMathOperator{\grad}{grad}
+
+%% Vectors
+%\renews
+%\renewcommand{\vec}[1]{\underline{#1}}
+%\renewcommand{\vec}[1]{\vv{#1}}
+%\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+%% Differential
+%\newcommand{\dif}{\, \text{d}}
+%\newcommand{\diff}{\text{d}}
+%
+%% Double underline for results
+%\def\doubleunderline#1{\underline{\underline{#1}}}
+%
+%\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+%%%%%%%%%%%%%%%%%%%% Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% twoside
+\geometry{left=2.7cm, right=2.3cm, top=2.7cm, bottom=2.2cm}
+
+%% oneside
+%\geometry{left=3.5cm, right=3.5cm, top=3cm, bottom=3cm}
+
+
+%%%%%%%%%%%% PDF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+	hidelinks=true,
+	%	linkcolor=black,
+	%	filecolor=black,      
+	%	urlcolor=black,
+	%	citecolor=black,
+	%	allcolors=black,
+	%	allbordercolors=white,
+	%pdfpagemode=FullScreen,
+	%	pdftitle={\mytitle},
+	%	pdfauthor={\myauthor},
+	pdfkeywords={},
+	%	pdfcreator={Some fancy PDF-Creator...},
+	bookmarksnumbered=true
+}
+
+
+%%%%%%%%%%%% Code %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\lstlistingname}{Code} % Visual Studio Style
+%\lstset{
+%	caption=\lstname,
+%%	backgroundcolor=\color{white!95!black},
+%	tabsize=2,
+%	rulecolor=,
+%	language=C++,
+%	%basicstyle=\scriptsize, % noch kleinerer Code
+%	basicstyle=\normalsize\ttfamily,
+%	upquote=true,
+%%	aboveskip={0.3\baselineskip},
+%	columns=fixed,
+%	showstringspaces=false,
+%	extendedchars=true,
+%	breaklines=true,
+%	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+%%	frame=single,
+%	showtabs=false,
+%	showspaces=false,
+%	showstringspaces=false,
+%	identifierstyle=\ttfamily,
+%	keywordstyle=\color[rgb]{0,0,1},
+%	commentstyle=\color[rgb]{0.133,0.545,0.133},
+%	stringstyle=\color[rgb]{0.6,0,0}, % Matlab:  0.627,0.126,0.941
+%	numbers=left,
+%	numberstyle=\ttfamily\tiny,
+%	stepnumber=1,
+%	xleftmargin=0em,
+%%	numbersep=5pt,
+%%	belowskip=1em
+%}
+
+
+%%%%%%%%%%%% footnotes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[flushmargin, hang]{footmisc} % flush footnote mark to left margin
+\usepackage{regexpatch}
+\makeatletter
+% 1. remove all redefinitions about footnotes done by \maketitle
+%    and add \titletrue
+\regexpatchcmd{\maketitle}
+{\c{def}\c{@makefnmark}.*\c{if@twocolumn}}
+{\c{titletrue}\c{if@twocolumn}}
+{}{}
+% 2. define a conditional
+\newif\iftitle
+%% 3. redefine \@makefnmark to print nothing when \titletrue
+%\xpretocmd{\@makefnmark}{\iftitle\else}{}{}
+%\xapptocmd{\@makefnmark}{\fi}{}{}
+% 4. ensure \@makefntext has \titlefalse
+%    that's justified by the fact that \@makefnmark
+%    in \@makefntext is set in a box
+\xpretocmd{\@makefntext}{\titlefalse}{}{}
+
+\makeatother
+
+\renewcommand{\footnotemargin}{1em}
+%\addtolength{\footnotesep}{5mm}
+\skip\footins=2\bigskipamount     % Determine the space above the rule
+\renewcommand*{\footnoterule}{%
+	\kern-3pt%
+	\hrule width 1in%
+	\kern 2.6pt%
+	\vspace{\smallskipamount}       % The additional space below the rule
+}
+
+
+
+%%%%%%%%%%%% captions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[textfont={small},labelfont={small, bf}]{caption}
+\DeclareCaptionFont{black}{ \color{white} }
+\DeclareCaptionFormat{listing}{
+	\colorbox[cmyk]{0.43, 0.35, 0.35,0.01 }{
+		\parbox{\textwidth}{\hspace{15pt}#1#2#3}
+	}
+}
+\captionsetup{format=plain, singlelinecheck=true}
+\captionsetup[lstlisting]{labelfont={small, bf}, textfont={small}}
+
+
+%%%%%%%%%%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{titling}
+\setlength{\droptitle}{-5em}
+\pretitle{\begin{center}\LARGE\normalfont\scshape}
+	\posttitle{\par\end{center}}
+\preauthor{\begin{center}}
+	\postauthor{\par\end{center}}
+\predate{\begin{center}}
+	\postdate{\par\end{center}}
+
+
+%%%%%%%%%%%% footer / header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+
+% twoside with subsection
+\fancyhf{}
+\fancyhead[RE]{\small\nouppercase\leftmark}
+\fancyhead[LO]{\small\rightmark}
+\fancyhead[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
+% Does not really work...
+%\setotherlanguage{greek}
+%\setotherlanguage{hebrew}
+%\newfontfamily\greekfont[]{Linux Libertine O}
+%\newfontfamily\hebrewfont[]{Linux Libertine O}
+
+\newcommand{\bm}{\vectorbold*} % using physics package
+
+\newcommand{\matlab}{\textsc{Matlab}\textsuperscript{\tiny{\textregistered}}}
+
+
+
+% ===== Bible ==================================================================
+
+%\usepackage{bibleref-german}
+%\biblerefstyle{Lutherbibel}
+%\biblerefformat{kurz}
+
+% \usepackage{bibleref}
+% \biblerefstyle{jerusalem}
+% Example: \bibleverses{Ex}(20:2,5,7-11)(21:3)
+
+%\newcommand{\V}[1]{\raisebox{.5ex}{\footnotesize#1 \nobreak\hspace{0.01em}}}
+%
+%
+%\urlstyle{same}
+
+
+
+% \usepackage{biblatex}
+% \addbibresource{bib.bib}
