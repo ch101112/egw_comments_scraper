@@ -14,7 +14,7 @@ from babel.dates import format_datetime
 YEAR = "2021"
 QUARTER = "03"  # 1...4
 LANGUAGE = "en"  # "en" (default), "de", "fr"
-NUM_FILES = 1  # 1...13 (default)
+NUM_FILES = 13  # 1...13 (default)
 URL_ROOT = "https://sabbath-school.adventech.io/"
 
 # %% SCRAPER FUNCTION
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     for i in range(1, 1 + NUM_FILES):
         filename = os.path.join(pathOutput, f"egw_{LANGUAGE}_{i:02}.tex")
         subprocess.call(
-            f"pdflatex.exe {filename} -quiet -interaction=batchmode -output-directory {pathOutput} -halt-on-error "
+            f"pdflatex {filename} -quiet -interaction=batchmode -output-directory {pathOutput} -halt-on-error "
         )
         print(f"File 'egw_{LANGUAGE}_{i:02}.tex' compiled.")
     print(f"Elapsed time (compilation): {time.time() - t1}")
