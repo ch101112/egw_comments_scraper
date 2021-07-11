@@ -15,12 +15,12 @@ Scrapes the Ellen G. White comments from the <a href="https://sabbath-school.adv
 
 ### Settings
 
-<img style="width: 50%" src="screenshot3.png" >
+<img width="40%" src="screenshot3.png" >
 
 
 ### Output
 
 
-<img style="width: 50%" src="screenshot2.png" >
+<img width="40%" src="screenshot2.png" >
 <br>
-<img style="width: 80%" src="screenshot1.png" >
+<img width="75%" src="screenshot1.png" >
