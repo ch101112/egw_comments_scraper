@@ -2,25 +2,28 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[protrusion=true, expansion]{microtype} 
+%\usepackage[protrusion=true, expansion]{microtype} 
 
 \usepackage[hidelinks]{hyperref} % Must go after the patches
 
 
 %%%%%%%%%%%%%%%%%%%% Fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{fontspec}
 
-\usepackage[english]{babel}
+\usepackage{polyglossia}
 
 
-
-\usepackage{Charter}
 \addtokomafont{disposition}{\rmfamily}
 
 
 \usepackage{textcomp}
 
 \linespread{1.1}  
+
+
+\usepackage[final]{microtype}
+\setmainfont[Ligatures=TeX]{XCharter}
 
 
 %%%%%%%%%%%%%%%%%%%% Random Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +121,7 @@
 
 \usepackage{titling}
 \setlength{\droptitle}{-5em}
-\pretitle{\begin{center}\LARGE\normalfont\scshape}
+\pretitle{\begin{center}\LARGE\bfseries}
 	\posttitle{\par\end{center}}
 \preauthor{\begin{center}}
 	\postauthor{\par\end{center}}
