@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 YEAR = "2021"
 QUARTER = "03"  # 1...4
-LANGUAGE = "en"  # "en" (default), "de", "fr"
+LANGUAGE = "fr"  # "en" (default), "de", "fr"
 NUM_FILES = 13  # 1...13 (default)
 URL_ROOT = "https://sabbath-school.adventech.io/"
 
@@ -37,7 +37,7 @@ def getTextWeek(baseUrl: str, weekNum: int, pathOutput) -> None:
     elif LANGUAGE == "fr":
         id = "citations-dellen-white-en-complément-à-létude-de-la-bible-par-lécole-du-sabbat"
         header = "h3"
-        babel="french"
+        babel = "french"
     elif LANGUAGE == "de":
         id = "zusätzliche-lektüre-ausgewählte-zitate-von-ellen-g-white"
         header = "h4"
@@ -85,12 +85,12 @@ def getTextWeek(baseUrl: str, weekNum: int, pathOutput) -> None:
 
     # Get Links of Weekdays
     myAs = mydivs[0].select("a")
-    
+
     def getDaySoups(a):
         urlDay = URL_ROOT[:-1] + a.get("href")
         pageDay = requests.get(urlDay)
         return BeautifulSoup(pageDay.content, "html.parser")
-    
+
     # Get Daily soups
     with ThreadPoolExecutor(7) as ex:
         futures = [ex.submit(getDaySoups, a) for a in myAs[0:7]]
@@ -113,7 +113,7 @@ def getTextWeek(baseUrl: str, weekNum: int, pathOutput) -> None:
             # No Indentation for Friday Paragraph
             if date.isoweekday() == 5:
                 f.write("\\setlength{\parindent}{0pt}")
-            
+
             # Select and Write the Paragraphs
             target = soupDay.find(header, text=titleEgw)
             for sib in target.find_next_siblings():
@@ -129,7 +129,7 @@ def getTextWeek(baseUrl: str, weekNum: int, pathOutput) -> None:
     f.write("\\end{document}\n\n")
     f.close()
     print(f"File 'egw_{LANGUAGE}_{weekNum:02}.tex' written.")
-    
+
 
 # ==============================================================================
 # RUN
@@ -155,7 +155,6 @@ if __name__ == "__main__":
 
     # ----------------------
     # Scraping (in parallel)
-    
 
     print("\n\n=====", "Scraping and saving the data to TeX-files...", "=====")
 
